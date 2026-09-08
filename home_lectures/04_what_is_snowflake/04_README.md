@@ -1,0 +1,23 @@
+# What is snowflake?
+
+
+Video on snowflake theory :point_down:
+
+[![hierarchy of snowflake securable objects](https://github.com/kokchun/assets/blob/main/data_warehouse/snowflake_theory_video_objects.png?raw=true)](https://youtu.be/KkmrVSbMap8)
+
+Video on creating virtual warehouse :point_down:
+
+[![creating virtual warehouse](https://github.com/kokchun/assets/blob/main/data_warehouse/snowflake_virtual_warehouse_video.png?raw=true)](https://www.youtube.com/watch?v=fhwdKmp_7S8)
+
+
+In this lecture we cover the following topics 
+
+- more concepts on Snowflake
+- try create objects on Snowflake hands-on
+
+
+## Read more :eyeglasses:
+
+- [Key concepts & architecture - snowflake docs](https://docs.snowflake.com/en/user-guide/intro-key-concepts)
+- [Overview of the data lifecycle](https://docs.snowflake.com/en/user-guide/data-lifecycle)
+- [Snowflake marketplace - snowflake docs](https://www.snowflake.com/en/data-cloud/marketplace/)

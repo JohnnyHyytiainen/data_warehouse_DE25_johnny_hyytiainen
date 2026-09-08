@@ -1,0 +1,17 @@
+[project]
+name = "data-warehouse-de25-johnny-hyytiainen"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Johnny Hyytiäinen", email = "Johnny.Hyytiainen@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = []
+
+[project.scripts]
+data-warehouse-de25-johnny-hyytiainen = "data_warehouse_de25_johnny_hyytiainen:main"
+
+[build-system]
+requires = ["uv_build>=0.12.6,<0.13.0"]
+build-backend = "uv_build"
