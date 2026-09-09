@@ -1,7 +1,7 @@
 ## Class notes.
 
-[Modern data stack slide](weekly_slides/slides_data_warehouse_intro.pdf)
-
+- [Modern data stack slide](weekly_slides/slides_data_warehouse_intro.pdf)
+- [Kursstruktur för denna kurs](weekly_slides/slides_data_warehouse_intro.pdf)
 
 - Genomgång av data warehouse i den morderna datastacken.
     - Äldre typer av 'data warehouses' (Traditional datastack <LÄS PÅ MER OM>):
