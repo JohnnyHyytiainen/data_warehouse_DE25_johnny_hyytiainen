@@ -1,0 +1,1 @@
+# Lecture notes for week 2 of data warehouse lifecycle course
