@@ -2,7 +2,7 @@
 
 - [Modern data stack slide](weekly_slides/slides_data_warehouse_intro.pdf)
 - [Kursstruktur för denna kurs](weekly_slides/slides_data_warehouse_intro.pdf)
-
+- [Vad är snowflake?](weekly_slides/slides_what_is_snowflake.pdf)
 - Genomgång av data warehouse i den morderna datastacken.
     - Äldre typer av 'data warehouses' (Traditional datastack <LÄS PÅ MER OM>):
         - On prem, tight coupled hardware(Tänk innan cloud -> LAN över en stor serverhall t.ex)
@@ -30,3 +30,11 @@
 
 ---
 
+## Kostnader för snowflake.
+Det man betalar för är:
+
+Beräkningen, varje sekund ens warehouse är igång * storleken.
+
+Lagring, genomsnittlig mängd per månad med historiken inräknad.
+
+Så om jag gör en query mot en db som innehåller miljontals rader och t.ex en med tusentals rader kan kosta lika exakt lika mycket om dom tar exakt lika lång tid att köra om jag förstår det helt rätt.
