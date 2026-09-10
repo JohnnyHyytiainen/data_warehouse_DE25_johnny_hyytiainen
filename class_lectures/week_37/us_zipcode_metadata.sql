@@ -21,7 +21,7 @@ USE SCHEMA ZIP_DEMOGRAPHICS;
 
 -- Gör första test queryn
 SELECT * FROM ZIP_CODE_METADATA
-LIMIT 150;
+LIMIT 10;
 
 
 -- Gör lite fler queries
@@ -62,3 +62,76 @@ SELECT
 COUNT(*) ZIP
 FROM ZIP_CODE_METADATA;
 
+----------------------
+-- 1: Vad är en row, hur många rows finns totalt, hur många unika zips
+SELECT 
+    COUNT(*) AS TOTAL_ROWS, 
+    COUNT(DISTINCT ZIP) AS UNIQUE_ZIPS 
+FROM ZIP_CODE_METADATA;
+
+---------------------
+-- 2: Täckning. Hur många delstater finns med, och hur många postnummer har var och en?
+-- svar: 58 stater, 2314 nr_of_zips i tx, 1 nr_of_zipz i as
+SELECT 
+    STATE, 
+    COUNT(ZIP) AS NUMBER_OF_ZIPS 
+FROM ZIP_CODE_METADATA 
+GROUP BY STATE 
+ORDER BY NUMBER_OF_ZIPS DESC;
+
+----------
+-- 3: Hitta hål i datan. Hur många rows saknar TOTAL_POPULATION? 
+-- Svar: 4 688 rows
+SELECT
+    COUNT(*) - COUNT(TOTAL_POPULATION) AS MISSING_POP_ROWS
+FROM ZIP_CODE_METADATA;
+
+--------
+-- 4: Topplista, tio mest folkrika postnumren, med stad och delstat
+-- Nulls last är bra att använda i snowflake, de sätter NULLS allra sist och inte först som DESC kan göra
+-- Svar: zip 77494, city Katy, state TX och total_pop 126310 på plats nr 1
+-- Svar: zip 11385, city Ridgewood, state NY och total_pop 105025 på plats nr 10
+SELECT
+    ZIP,
+    CITY,
+    STATE,
+    TOTAL_POPULATION
+FROM ZIP_CODE_METADATA
+ORDER BY TOTAL_POPULATION DESC NULLS LAST
+LIMIT 10;
+
+-------
+-- 5: Uppåt i nivå. Total befolkning per delstat, SORTERAT. SUM över GROUP BY
+-- Svar: State CA population 39182218 
+-- svar: AS population null (no value)
+SELECT
+    STATE,
+    SUM(TOTAL_POPULATION) AS STATE_POPULATION
+FROM ZIP_CODE_METADATA
+GROUP BY STATE
+ORDER BY STATE_POPULATION DESC NULLS LAST;
+
+-------
+-- 6: Fälla. Ta fram meddelålder PER delstat. Fungerar AVG(MEDIAN_AGE) här?
+-- Svar: Det här blir vinklat, simpsons paradox(?) En liten stat och eller ett postnummer med få invånare väger lika tungt
+-- som en delstat och postnummer med otroligt många fler människor i sig.
+-- Här bör jag skriva en query som aggregerar/räknar ut median age * totala populationen och delar med totala populationen?
+-- Fel query här under
+-- Svar: State: MO, AVG_OF_MEDIAN_AGE: 42.944674556
+SELECT 
+    STATE, 
+    AVG(MEDIAN_AGE) AS AVG_OF_MEDIAN_AGE 
+FROM ZIP_CODE_METADATA 
+GROUP BY STATE;
+
+-- 6: Rätt query(?)
+-- Svar: State: MO, AVG_OF_MEDIAN_AGE: 39.114919534
+SELECT
+    STATE,
+    SUM(MEDIAN_AGE * TOTAL_POPULATION) / SUM(TOTAL_POPULATION) AS AVG_OF_MEDIAN_AGE
+FROM ZIP_CODE_METADATA
+GROUP BY STATE;
+
+-------
+-- 7: Skevhet. Vilken zip har störst obalans mellan kvinnor och män.
+SELECT 
