@@ -18,6 +18,7 @@ GRANT ROLE movies_dlt_role TO USER extract_loader;
 
 -- Ge min egna personliga user rollen som movies_reader_role
 GRANT ROLE movies_reader_role TO USER johnnyhyytiainen;
+GRANT ROLE movies_dlt_role TO USER johnnyhyytiainen;
 
 
 -- Ge tillstånd till rollerna.

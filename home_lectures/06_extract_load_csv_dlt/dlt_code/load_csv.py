@@ -1,7 +1,8 @@
+import os
+from pathlib import Path
+
 import dlt
 import pandas as pd
-from pathlib import Path
-import os
 
 
 # Extrahera data ifrån min data source(lokal csv i /data folder.)
@@ -23,7 +24,6 @@ if __name__ == "__main__":
     os.chdir(working_directory)
     csv_path = working_directory / "data" / "NetflixOriginals.csv"
     data = load_csv_resource(csv_path, encoding="latin1")
-    print(data)
     pipeline = dlt.pipeline(
         pipeline_name="movies", destination="snowflake", dataset_name="staging"
     )
