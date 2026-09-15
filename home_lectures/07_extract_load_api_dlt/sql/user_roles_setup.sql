@@ -5,6 +5,8 @@ USE ROLE SECURITYADMIN;
 
 -- Dags att ge tillstånd som SEC-admin
 GRANT ROLE home_job_ads_dlt_role TO USER home_extract_loader;
+-- Ge mitt konto denna roll också
+GRANT ROLE home_job_ads_dlt_role TO USER johnnyhyytiainen;
 
 -- Ge USAGE tillstånden(privileges) till rollen
 GRANT USAGE ON WAREHOUSE dev_wh to ROLE home_job_ads_dlt_role;
@@ -12,6 +14,7 @@ GRANT USAGE ON DATABASE home_job_ads TO ROLE home_job_ads_dlt_role;
 GRANT USAGE ON SCHEMA home_job_ads.staging TO ROLE home_job_ads_dlt_role;
 
 -- Ge vad för typ av OPERATIONS privileges
+GRANT CREATE TABLE ON SCHEMA home_job_ads.staging TO ROLE home_job_ads_dlt_role;
 GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA home_job_ads.staging TO ROLE home_job_ads_dlt_role;
 GRANT SELECT, INSERT, UPDATE, DELETE ON FUTURE TABLES IN SCHEMA home_job_ads.staging TO ROLE home_job_ads_dlt_role;
 
@@ -23,4 +26,6 @@ SHOW FUTURE GRANTS IN SCHEMA home_job_ads.staging;
 SHOW GRANTS TO ROLE home_job_ads_dlt_role;
 SHOW GRANTS TO USER home_extract_loader;
 
-GRANT ROLE home_job_ads_dlt_role TO USER johnnyhyytiainen;
+SHOW GRANTS TO USER johnnyhyytiainen;
+
+
