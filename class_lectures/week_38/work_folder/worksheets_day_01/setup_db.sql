@@ -13,6 +13,9 @@ CREATE DATABASE IF NOT EXISTS icecream_db;
 -- Välj warehouse
 USE WAREHOUSE dev_wh;
 
+-- Välj SCHEMA att använda
+USE SCHEMA icecream_db.public; 
+
 -- Skapa table för glass smakerna
 CREATE TABLE flavors (
     flavor_id INT AUTOINCREMENT,
