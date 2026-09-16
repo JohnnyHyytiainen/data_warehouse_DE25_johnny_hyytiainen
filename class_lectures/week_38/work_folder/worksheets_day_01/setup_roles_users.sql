@@ -33,6 +33,8 @@ GRANT ROLE icecream_reader TO ROLE icecream_writer;
 
 -- Kolla vilka rättigheter min writer har
 SHOW GRANTS TO ROLE icecream_writer;
+-- kolla rättigheter min reader har
+SHOW GRANTS TO ROLE icecream_reader;
 
 -- Nu ska WRITER få tillgång till CRUD operations
 GRANT 
