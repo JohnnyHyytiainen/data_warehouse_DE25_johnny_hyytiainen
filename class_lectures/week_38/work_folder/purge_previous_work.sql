@@ -1,7 +1,7 @@
 --
 -- Purge script för att rensa tidigare data från home_lecture/ som skapades INNAN jag satte home_ prefixet för att särskilja på home lectures vs in class lectures
--- 1. Välj rätt roll(SYSTEMADMIN), droppa databas, 
--- 2. Välj rätt roll(USERADMIN) som äger skapade användarna, droppa skapade användare.
+-- 1. Välj rätt roll(SYSADMIN), droppa databas, 
+-- 2. Välj rätt roll(USERADMIN) som äger skapade roller OCH användarna, droppa skapade roller + användare.
 -- 3. Dubbelkolla att ingenting ligger kvar och skräpar
 -- 4. Dubbelkolla alla roller
 -- 5. Dubbelkolla alla users
