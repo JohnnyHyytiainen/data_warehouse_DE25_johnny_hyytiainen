@@ -17,3 +17,6 @@ CREATE TABLE suppliers (
     PRIMARY KEY (supplier_id)
 );
 
+USE ROLE SYSADMIN;
+
+DROP TABLE suppliers;
