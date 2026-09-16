@@ -25,6 +25,9 @@ GRANT USAGE ON DATABASE icecream_db TO ROLE icecream_reader;
 GRANT USAGE ON ALL SCHEMAS IN DATABASE icecream_db TO ROLE icecream_reader;
 GRANT SELECT ON ALL TABLES IN SCHEMA icecream_db.public TO ROLE icecream_reader;
 GRANT SELECT ON FUTURE TABLES IN SCHEMA icecream_db.public TO ROLE icecream_reader;
+GRANT SELECT ON ALL VIEWS IN SCHEMA icecream_db.public TO ROLE icecream_reader;
+GRANT SELECT ON FUTURE VIEWS IN SCHEMA icecream_db.public TO ROLE icecream_reader;
+
 ---
 GRANT ROLE icecream_reader TO ROLE icecream_writer;
 
