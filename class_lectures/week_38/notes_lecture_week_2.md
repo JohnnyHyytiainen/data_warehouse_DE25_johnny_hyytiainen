@@ -1,5 +1,6 @@
 # Lecture notes for week 2 of data warehouse lifecycle course
 ## Class notes.
+*Johnny Hyytiäinen*
 
 - [Snowflake users and roles](weekly_slides/snowflake_users_and_roles.pdf)
 - [Slides regarding DLT - Extract, Load CSV](weekly_slides/slides_what_is_dlt.pdf)
@@ -47,13 +48,14 @@ Den roll som skapade ett objekt äger det. Det låter oskyldigt men är den vanl
 
 ---
 
+### Två axlar och inte en - Sluta tänka linjärt.
+- Vanligtvis tänker man linjärt, exempel här under:
+
 ```
 warehouse  →  databas  →  schema  →  tabell
 ```
 
-Så hänger de inte ihop. Databas, schema och tabell ligger *inuti varandra* och bildar en kedja.
-Warehouset ligger inte inuti någonting — det är motorn som utför arbetet, och den har ingenting
-med var datan bor att göra. Det är två axlar:
+- Så hänger de inte ihop. Databas, schema och tabell ligger *inuti varandra* och bildar en kedja. Warehouset ligger inte inuti någonting, det är motorn som utför arbetet, och den har ingenting med var datan bor att göra. Det är egentligen två axlar och *inte* en axel:
 
 ```
                   ┌──► USAGE  på WAREHOUSE ──► motorn som gör jobbet
@@ -63,3 +65,4 @@ med var datan bor att göra. Det är två axlar:
                   └──► USAGE  på DATABAS ──► USAGE  på SCHEMA ──► SELECT  på TABELL
                          "få gå in"           "få gå in"           "få läsa"
 ```
+
