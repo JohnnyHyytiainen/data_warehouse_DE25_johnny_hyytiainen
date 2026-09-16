@@ -40,12 +40,34 @@ rättighet(privilege)  →  ges till  →  ROLL(ROLE)  →  ges till  →  ANVÄ
 * Den praktiska regeln: **`ACCOUNTADMIN` används för att sätta upp kontot och för fakturering, inte för
 att arbeta.** Att göra allt som `ACCOUNTADMIN` fungerar utmärkt, ända fram tills något ska delegeras, och då visar det sig att ingen struktur finns.
 
-Egna roller skapas under `SYSADMIN`, så att den rollen kan se och förvalta allt som byggs.
+Egna roller skapas under `USERADMIN` och ger `SYSADMIN` de rättigheter som den egna rollen har, detta så att den rollen kan se och förvalta allt som byggs.
 
 ### Ägarskap:
 
 Den roll som skapade ett objekt äger det. Det låter oskyldigt men är den vanligaste orsaken till förvirring i grupparbeten: skapar du en tabell som `ACCOUNTADMIN` äger `ACCOUNTADMIN` den, och en kollega med en vanlig roll ser den inte förrän någon uttryckligen delat den.
 
+### Skapandet av custom roles och hur en bör gå tillväga.
+
+`USERADMIN` skapar nya USERS och ROLES, då detta är den som har översikt över alla USERS+ROLES. Men eftersom att skaparen av objekt är ÄGAREN till objektet i Snowflake så bör även `USERADMIN` GRANT det privileges som custom rollen fick till `SYSADMIN`. Detta då `SYSADMIN` är admin över alla objekt(`WHs`, `DBs` etc etc.) Så flödet bör då vara:
+
+```sql 
+-- USERADMIN skapar rollen
+USE ROLE USERADMIN;
+CREATE ROLE IF NOT EXISTS movies_dlt_role;
+
+-- Koppla in rollen i trädet under SYSADMIN
+GRANT ROLE movies_dlt_role TO ROLE SYSADMIN;
+```
+Detta då det är två olika "avdelningar". En avdelning för skapandet av ROLES + USERS. En avdelning för hanteringen och översikt över alla OBJEKT. 
+
+- Trädet ska då se ut som så här:
+```
+ACCOUNTADMIN
+├── SECURITYADMIN
+│   └── USERADMIN          skapar rollen
+└── SYSADMIN
+    └── movies_dlt_role    kopplas in med GRANT ROLE
+```
 ---
 
 ### Två axlar och inte en - Sluta tänka linjärt.
