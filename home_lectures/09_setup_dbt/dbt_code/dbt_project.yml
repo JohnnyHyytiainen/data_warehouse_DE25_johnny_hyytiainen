@@ -1,33 +1,29 @@
-
-# Name your project! Project names should contain only lowercase characters
-# and underscores. A good package name should reflect your organization's
-# name or the intended use of these models
+# Projektets namn - Används igen som första nivå under models
 name: 'dbt_code'
 version: '1.0.0'
 
-# This setting configures which "profile" dbt uses for this project.
+# Vilket block i ~/.dbt/profiles.yml som ger anslutningen till Snowflake
 profile: 'home_dbt_code'
 
 # These configurations specify where dbt should look for different types of files.
 # The `model-paths` config, for example, states that models in this project can be
 # found in the "models/" directory. You probably won't need to change these!
 model-paths: ["models"]
-analysis-paths: ["analyses"]
 test-paths: ["tests"]
-seed-paths: ["seeds"]
 macro-paths: ["macros"]
-snapshot-paths: ["snapshots"]
 
-clean-targets:         # directories to be removed by `dbt clean`
+# Mappar som dbt clean tar bort
+clean-targets:
   - "target"
   - "dbt_packages"
 
 
+# Inställningar för modellerna. Trädet ska spegla mapparna under models/
 models:
-  dbt_code:
-    staging:
-      schema: staging
-      materialized: table
-    refined:
-      schema: warehouse
-      materialized: table
+  dbt_code:               # det här projektets modeller, inte ett package (t.ex dbt_utils)
+    staging:              # Det här gäller ALLT i models/staging/ folders
+      +schema: staging
+      +materialized: table
+    refined:             # Gäller allt i models/refined/ folders
+      +schema: warehouse
+      +materialized: table
