@@ -221,3 +221,6 @@ __marimo__/
 # DLT + setup_user
 .dlt
 setup_user*
+
+# Eget studiematerial som samlas för att enkelt kunna läsa on the go utan dator
+kunskap/
