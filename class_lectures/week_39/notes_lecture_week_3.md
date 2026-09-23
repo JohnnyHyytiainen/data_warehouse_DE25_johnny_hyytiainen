@@ -4,6 +4,7 @@
 
 Focus for week 3 will be the transforming step.
 
+- Running dbt init command `dbt init dbt_code --skip-profile-setup`
 --- 
  
 ### Slides for week 3, lecture 08, 09 and 10. 
