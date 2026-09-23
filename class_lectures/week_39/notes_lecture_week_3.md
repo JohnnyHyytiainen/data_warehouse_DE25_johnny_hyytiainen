@@ -61,3 +61,6 @@ erDiagram
         number sales_amount
     }
 ```
+
+---
+
