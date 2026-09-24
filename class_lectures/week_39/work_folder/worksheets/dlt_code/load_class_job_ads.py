@@ -1,28 +1,29 @@
-import json
 import os
 from pathlib import Path
 
 import dlt
-import requests
-
-url = "https://jobsearch.api.jobtechdev.se"
-url_for_search = f"{url}/search"
-
-
-def _get_ads(url_for_search, params):
-    headers = {"accept": "application/json"}
-    response = requests.get(url_for_search, headers=headers, params=params)
-    response.raise_for_status()  # check for http errors
-    return json.loads(response.content.decode("utf8"))
+from dlt.sources.helpers.rest_client import RESTClient
+from dlt.sources.helpers.rest_client.paginators import OffsetPaginator
 
 
 @dlt.resource(write_disposition="replace")
 def jobads_resource(params):
-    url = "https://jobsearch.api.jobtechdev.se"
-    url_for_search = f"{url}/search"
-
-    for ad in _get_ads(url_for_search, params)["hits"]:
-        yield ad
+    # Klienten ska skapas HÄR INNE i funktionen. Resursen körs först när pipen hämtar data
+    # och då kan os.chdir peka dlt mot rätt .dlt folder utan att krascha.
+    # Klienten som vet VART den ska och HUR den ska bläddra sidor
+    client = RESTClient(
+        base_url="https://jobsearch.api.jobtechdev.se",
+        headers={"accept": "application/json"},
+        paginator=OffsetPaginator(
+            limit=100,  # antal annonser per sida. 100 är API'ets MAX
+            total_path="total.value",  # Vart totalen står i svaret
+            maximum_offset=2100,  # jobtechs tak, och dess max offset.
+        ),
+        data_selector="hits",  # Var annonsen ligger i svaret. Pekar ut hits istället för att dlt ska inferera(?)(gissa)
+    )
+    # paginate() hämtar sida efter sida tills en regel för stopp uppnås.
+    for page in client.paginate("/search", params=params):
+        yield page
 
 
 def run_pipeline(table_name):
@@ -32,7 +33,8 @@ def run_pipeline(table_name):
         dataset_name="staging",
     )
 
-    params = {"limit": 100, "occupation-field": "6Hq3_tKo_V57"}
+    # limit ska nu skötas av paginatorn under @dlt.resource decoratorn
+    params = {"occupation-field": "6Hq3_tKo_V57"}
 
     load_info = pipeline.run(jobads_resource(params=params), table_name=table_name)
     print(load_info)
