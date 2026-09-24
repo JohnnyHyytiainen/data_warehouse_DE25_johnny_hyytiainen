@@ -9,5 +9,6 @@ select
     o.occupation_field,
     f.application_deadline,
 from fct_job_ads f
-left join dim_occupation o on f.occupation_id = o.occupation_id
+-- En inner join: Koden säger vad den ska göra, where filtrerar på yrkesområden
+inner join dim_occupation o on f.occupation_id = o.occupation_id
 where o.occupation_field = 'Yrken med teknisk inriktning'
