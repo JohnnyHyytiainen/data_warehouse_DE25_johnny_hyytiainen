@@ -222,5 +222,8 @@ __marimo__/
 .dlt
 setup_user*
 
-# Eget studiematerial som samlas för att enkelt kunna läsa on the go utan dator
-kunskap/
+#dbt
+target/
+dbt_packages/
+logs/
+.env
