@@ -27,7 +27,7 @@ def jobads_resource(params):
 
 def run_pipeline(table_name):
     pipeline = dlt.pipeline(
-        pipeline_name="jobsearch",
+        pipeline_name="class_technical_field_job_ads",  # eget namn = eget minne, rör inte andra skripts tabeller
         destination="snowflake",
         dataset_name="staging",
     )
