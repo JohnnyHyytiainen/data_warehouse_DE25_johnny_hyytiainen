@@ -19,10 +19,19 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 # Inställningar för modellerna. Trädet ska spegla mapparna under models/
 models:
-  dbt_code:               # det här projektets modeller, inte ett package (t.ex dbt_utils)
-    staging:              # Det här gäller ALLT i models/staging/ folders
+  dbt_code:                   # det här projektets modeller
+    +materialized: table      # standard för alla mappar som inte säger annat
+    # --- föreläsning 09 ---
+    staging:                  # allt i models/staging/
       +schema: staging
-      +materialized: table
-    refined:             # Gäller allt i models/refined/ folders
+    refined:                  # allt i models/refined/
       +schema: warehouse
-      +materialized: table
+    # --- föreläsning 10 ---
+    src:                      # allt i models/src/ — byggs aldrig, blir CTE nedströms
+      +materialized: ephemeral
+    dim:                      # dimensionerna till warehouse
+      +schema: warehouse
+    fct:                      # faktatabellen till warehouse
+      +schema: warehouse
+    mart:                     # marterna till marts
+      +schema: marts
