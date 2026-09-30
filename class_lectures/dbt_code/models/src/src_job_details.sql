@@ -1,4 +1,4 @@
-with stg_job_ads as (select * from {{ source('job_ads', 'stg_ads') }})
+with stg_job_ads as (select * from {{ source ('job_ads', 'stg_ads') }})
 
 -- en rad per hämtad annons, 
 -- bara annonsers beskrivande columns. Designad som dbml ERD i tidigare lecture.
