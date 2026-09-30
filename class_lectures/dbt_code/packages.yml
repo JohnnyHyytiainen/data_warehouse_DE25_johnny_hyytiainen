@@ -1,4 +1,8 @@
 packages:
+  # Hjälp macros
   - name: dbt_utils
     package: dbt-labs/dbt_utils
     version: 1.4.1
+
+  - package: calogica/dbt_expectations
+    version: 0.10.3
