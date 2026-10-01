@@ -10,6 +10,8 @@ profile: 'class_dbt_code'
 # found in the "models/" directory. You probably won't need to change these!
 model-paths: ["models"]
 macro-paths: ["macros"]
+asset-paths: ["assets"]
+docs-paths: ["docs"]
 
 # Mappar som dbt clean tar bort.
 clean-targets:         # directories to be removed by `dbt clean`

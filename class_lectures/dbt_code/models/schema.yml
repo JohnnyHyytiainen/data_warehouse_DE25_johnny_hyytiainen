@@ -2,8 +2,10 @@
 models:
     # Tester för unika värden och null checks
     - name: dim_employer        # Representerar vilken table
+      description: "Information about employer such as name, workplace address, organisation number"
       columns:                  # Representerar vilken column
         - name: employer_id     # Vilken column ska testas
+          description: "Primary key, a surrogate key thats generated based on columns: id, employer_id."
           data_tests:           # Vilka tester ska köras
             - unique            # unique values på i column
             - not_null          # inga null values i column
@@ -12,8 +14,10 @@ models:
             - not_null          # Inga null values i column
 
     - name: dim_job_details
+      description: "Information about the job ad"
       columns:
         - name: job_details_id
+          description: "Primary key, a surrogate key thats generated based on columns, id job_details_id"
           data_tests: 
             - unique
             - not_null
@@ -26,23 +30,25 @@ models:
             - not_null
 
     - name: dim_occupation
+      description: "Information about the occupation, occupation group and occupation field."
       columns:
         - name: occupation_id
+          description: "Primary key, a surrogate key thats generated based on columns, id occupation_id"
           data_tests:
             - unique
             - not_null
-
         - name: occupation_field
           data_tests:
             - not_null
-
         - name: occupation
           data_tests:
             - not_null
 
     - name: dim_auxiliary_attributes
+      description: "Information about the job description and what is needed such as experience, drivers license and access to car."
       columns:
         - name: auxiliary_attributes_id
+          description: "Primary key, a surrogate key thats generated based on columns, id auxiliary_attributes_id"
           data_tests:
             - unique
             - not_null
@@ -52,13 +58,16 @@ models:
 
     # Kontroll över PK-FK relationer mellan fact och dimension tables.
     - name: fct_job_ads
+      description: "The facts are relevance and vacancies."
       columns:
         - name: occupation_id
+          description: "Foreign key, a surrogate key generated for each unique occupation"
           data_tests:
             - relationships:
                 to: ref('dim_occupation')
                 field: occupation_id
         - name: job_details_id
+          description: "Foreign key, a surrogate key generated for each unique job"
           data_tests:
             - relationships:
                 to: ref('dim_job_details')
