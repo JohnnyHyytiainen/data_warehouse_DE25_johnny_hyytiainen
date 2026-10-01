@@ -10,7 +10,7 @@ select
     max(description) as description,
     max(description_html_formatted) as description_html_formatted,
     max(employment_type) as employment_type,
-    max(duration) as duration,
+    COALESCE(max(duration), 'Ej angivet') as duration,
     max(salary_type) as salary_type,
     max(scope_of_work_min) as scope_of_work_min,
     max(scope_of_work_max) as scope_of_work_max
