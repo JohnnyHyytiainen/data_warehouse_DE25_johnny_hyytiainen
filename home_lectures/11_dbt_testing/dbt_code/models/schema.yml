@@ -1,0 +1,42 @@
+models:
+  - name: fct_job_ads
+    columns:
+      - name: occupation_id
+        data_tests:
+          # varje occupation_id i fact table måste också finnas i dimensionen
+          - relationships:
+              arguments:
+                to: ref('dim_occupation')
+                field: occupation_id
+
+      - name: relevance
+        data_tests:
+          # relevansen är en andel, alltså mellan 0 och 1
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+                max_value: 1
+          - dbt_expectations.expect_column_values_to_be_of_type:
+              arguments:
+                column_type: float
+
+      - name: vacancies
+        data_tests:
+          # 99 procent av alla annonserna ska ha mellan 1 och 20 platser
+          - dbt_expectations.expect_column_quantile_values_to_be_between:
+              arguments:
+                quantile: .99
+                min_value: 1
+                max_value: 20
+          # Det högsta värdet över 20 ger bara en varning, inte ett fel
+          - dbt_expectations.expect_column_max_to_be_between:
+              arguments:
+                min_value: 1
+                max_value: 20
+              config:
+                severity: warn
+          - dbt_expectations.expect_column_values_to_be_of_type:
+              arguments:
+                column_type: number
+
+                

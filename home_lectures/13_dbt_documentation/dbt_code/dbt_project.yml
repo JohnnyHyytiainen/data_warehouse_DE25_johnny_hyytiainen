@@ -29,4 +29,4 @@ models:
     fct:                    # fact table ska även den hamna i warehouse schemat 
       +schema: warehouse
     mart:                   # marts ska DOCK hamna i MARTS schemat
-      +schema: marts
+      +schema: marts      
