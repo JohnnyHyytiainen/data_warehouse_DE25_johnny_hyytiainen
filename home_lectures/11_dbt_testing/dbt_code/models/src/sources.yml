@@ -1,0 +1,7 @@
+# Här börjar dbt modelleringen. Sources definieras i denna yaml fil
+sources:
+    - name: job_ads
+      schema: staging
+      tables:
+        - name: stg_ads
+          identifier: technical_field_job_ads

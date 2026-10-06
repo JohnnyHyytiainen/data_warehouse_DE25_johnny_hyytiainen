@@ -82,7 +82,7 @@ models:
             - relationships:
                 to: ref('dim_auxiliary_attributes')
                 field: auxiliary_attributes_id
-    # Koll av relevance columnen i fact table - Ska vara ett float value mellan 0-1
+    # Koll av relevance columnen i fact table. Ska vara ett float value mellan 0-1
         - name: relevance
           data_tests:
           - dbt_expectations.expect_column_values_to_be_between:
