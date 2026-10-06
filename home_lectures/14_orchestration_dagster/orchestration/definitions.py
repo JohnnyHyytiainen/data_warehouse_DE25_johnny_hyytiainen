@@ -21,23 +21,21 @@ dlt_resource = DagsterDltResource()
 @dlt_assets(
     dlt_source=jobads_source(),
     dlt_pipeline=dlt.pipeline(
-        pipeline_name="jobsearch",
+        pipeline_name="home_jobads_dagster",
         destination="snowflake",
         dataset_name="staging",
     ),
 )
-def dlt_home_load(context: dg.AssetCheckExecutionContext, dlt: DagsterDltResource):
+def dlt_home_load(context: dg.AssetExecutionContext, dlt: DagsterDltResource):
     yield from dlt.run(context=context)
 
 
 # DBT asset
 
 dbt_project_directory = Path(__file__).parents[1] / "data_transformation"
-profiles_directory = Path.home() / ".dbt"
+profiles_dir = Path.home() / ".dbt"
 
-dbt_project = DbtProject(
-    project_dir=dbt_project_directory, profiles_directory=profiles_directory
-)
+dbt_project = DbtProject(project_dir=dbt_project_directory, profiles_dir=profiles_dir)
 
 # Få CLI commands
 dbt_resource = DbtCliResource(project_dir=dbt_project)
@@ -49,7 +47,7 @@ dbt_project.prepare_if_dev()
 # DBT asset
 @dbt_assets(manifest=dbt_project.manifest_path)
 def dbt_models(context: dg.AssetExecutionContext, dbt: DbtCliResource):
-    yield from dbt.cli(["build"], conext=context).stream()
+    yield from dbt.cli(["build"], context=context).stream()
 
 
 # Jobs
@@ -61,7 +59,11 @@ jobs_dbt = dg.define_asset_job(
     "jobs_dbt", selection=dg.AssetSelection.key_prefixes("warehouse", "marts")
 )
 
-schedule_dlt = dg.ScheduleDefinition(job=jobs_dlt, cron_schedule="10 30 * * *")
+schedule_dlt = dg.ScheduleDefinition(
+    job=jobs_dlt,
+    cron_schedule="30 10 * * *",  # minut, timme, dag, månad, veckodag
+    execution_timezone="Europe/Stockholm",  # annars tolkas tiden som UTC
+)
 
 
 @dg.asset_sensor(
