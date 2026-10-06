@@ -1,0 +1,32 @@
+# Projektets namn - Används igen som första nivå under models
+name: 'dbt_code'
+version: '1.0.0'
+
+# Vilket block i ~/.dbt/profiles.yml som ger anslutningen till Snowflake
+profile: 'home_dbt_code'
+
+# These configurations specify where dbt should look for different types of files.
+# The `model-paths` config, for example, states that models in this project can be
+# found in the "models/" directory. You probably won't need to change these!
+model-paths: ["models"]
+macro-paths: ["macros"]
+
+# Mappar som dbt clean tar bort
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+
+# Inställningar för modellerna. Trädet ska spegla mapparna under models/
+models:
+  dbt_code:                 # det här projektets modeller, inte ett package (t.ex dbt_utils)
+    +materialized: table  # allt som inte är SPECIFIERAT blir materialized som tables
+    src:                    # Det här gäller ALLT i models/src/ folders
+      +materialized: ephemeral
+      +schema: staging      # staging är där all data landar/hamnar (landingzone)
+    dim:                    # dimensionerna ska hamna i warehouse schemat
+      +schema: warehouse    
+    fct:                    # fact table ska även den hamna i warehouse schemat 
+      +schema: warehouse
+    mart:                   # marts ska DOCK hamna i MARTS schemat
+      +schema: marts      

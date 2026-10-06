@@ -1,0 +1,12 @@
+# Här börjar dbt modelleringen. Sources definieras i denna yaml fil
+sources:
+    - name: job_ads
+      schema: staging
+      tables:
+        - name: stg_ads
+          identifier: technical_field_job_ads
+          config:
+            # Kopplar källtabellen till dlt-asseten i Dagster, så att grafen får en pil från laddningen till modellerna
+            meta:
+              dagster:
+                asset_key: ["dlt_jobads_source_jobads_resource"]
