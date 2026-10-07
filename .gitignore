@@ -221,6 +221,7 @@ __marimo__/
 # DLT + setup_user
 .dlt
 setup_user*
+raw/
 
 #dbt
 target/
