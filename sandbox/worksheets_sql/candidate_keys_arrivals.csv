@@ -1,0 +1,2 @@
+flight_leg_identifier__flight_id,flight_leg_identifier__flight_departure_date_utc,flight_leg_identifier__departure_airport_iata,flight_leg_identifier__arrival_airport_iata,rows_per_key,statuses
+D84528,2026-10-06 02:00:00+02,RAK,ARN,2,"DEL, LAN"

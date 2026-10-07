@@ -1,0 +1,305 @@
+flight_id,airline_operator__name,codeshare_flight_id,_dlt_list_idx
+AF1062,Air France,AM5705,0
+AF1062,Air France,DL8482,1
+AF1062,Air France,G35209,2
+AF1062,Air France,KQ3150,3
+AF1062,Air France,MK9632,4
+AF1062,Air France,SK9723,5
+AF1062,Air France,WS5089,6
+AF1262,Air France,AM5708,0
+AF1262,Air France,DL8478,1
+AF1262,Air France,G35207,2
+AF1262,Air France,KQ3124,3
+AF1262,Air France,MK9630,4
+AF1262,Air France,MU1727,5
+AF1262,Air France,SK9721,6
+AF1262,Air France,UU8262,7
+AF1462,Air France,AM6093,0
+AF1462,Air France,G35213,1
+AF1462,Air France,JL5311,2
+AF1462,Air France,KQ3200,3
+AF1462,Air France,MK9634,4
+AF1462,Air France,MU1725,5
+AF1462,Air France,SK9722,6
+AF1462,Air France,WS5063,7
+AY801,Finnair,JL6897,0
+AY801,Finnair,QR6187,1
+AY805,Finnair,JL8317,0
+AY806,Finnair,QR6781,0
+AY807,Finnair,QR6770,0
+AY809,Finnair,AA9006,0
+AY809,Finnair,FI7302,1
+AY809,Finnair,IB6430,2
+AY809,Finnair,QR6772,3
+AY813,Finnair,AA8974,0
+AY813,Finnair,BA6043,1
+AY813,Finnair,FI7305,2
+AY813,Finnair,QR6784,3
+AY815,Finnair,AS7625,0
+AY815,Finnair,BA6049,1
+AY815,Finnair,JL6905,2
+AY815,Finnair,QR6782,3
+AY819,Finnair,AS7627,0
+AY819,Finnair,QR6783,1
+AY823,Finnair,QR6797,0
+AY824,Finnair,QR6796,0
+AY825,Finnair,QR6141,0
+BA776,British Airways,QR8359,0
+BA778,British Airways,QR8350,0
+BT101,Air Baltic,A33204,0
+BT101,Air Baltic,AC6471,1
+BT101,Air Baltic,EK3495,2
+BT101,Air Baltic,JU7653,3
+BT101,Air Baltic,SK9601,4
+BT109,Air Baltic,FB1454,0
+BT109,Air Baltic,SK9607,1
+EK157,Emirates,FI6005,0
+EK157,Emirates,QF8157,1
+FI306,Icelandair,AY6814,0
+FI306,Icelandair,EK3370,1
+FI306,Icelandair,TK8555,2
+FI306,Icelandair,TP5625,3
+IB823,Iberia,AA8547,0
+IB823,Iberia,AY5634,1
+IB823,Iberia,JL9445,2
+IB823,Iberia,VY5128,3
+JU380,Air Serbia,FB1861,0
+KL1215,KLM,DL9183,0
+KL1215,KLM,MU1799,1
+KL1215,KLM,SK6651,2
+KL1217,KLM,DL9595,0
+KL1217,KLM,GA9484,1
+KL1217,KLM,KE6419,2
+KL1217,KLM,MK5635,3
+KL1217,KLM,SK6653,4
+KL1219,KLM,DL9184,0
+KL1219,KLM,GA9482,1
+KL1219,KLM,KQ1109,2
+KL1219,KLM,MH5637,3
+KL1219,KLM,SK6655,4
+KL1219,KLM,UX3743,5
+KL1223,KLM,GA9374,0
+KL1223,KLM,KQ1115,1
+KL1223,KLM,MH5667,2
+KL1223,KLM,RO9302,3
+KL1223,KLM,SK6657,4
+KL1223,KLM,SV6311,5
+KL1225,KLM,AM6299,0
+KL1225,KLM,G35655,1
+KL1225,KLM,KQ1117,2
+KL1225,KLM,SK6659,3
+KL1225,KLM,SV6307,4
+KL1227,KLM,AM6300,0
+KL1227,KLM,KE6421,1
+KL1227,KLM,KQ1121,2
+KL1227,KLM,MU1801,3
+KL1227,KLM,SK6661,4
+KL1227,KLM,UX3745,5
+LH2414,Lufthansa,AC9589,0
+LH2414,Lufthansa,NH6083,1
+LH2414,Lufthansa,SN7022,2
+LH2414,Lufthansa,UA9222,3
+LH2416,Lufthansa,A31478,0
+LH2416,Lufthansa,AC9293,1
+LH2416,Lufthansa,AZ4832,2
+LH2416,Lufthansa,UA9158,3
+LH2418,Lufthansa,AC9332,0
+LH2418,Lufthansa,UA9013,1
+LH2420,Lufthansa,A31418,0
+LH2420,Lufthansa,AZ4834,1
+LH800,Lufthansa,AC9093,0
+LH800,Lufthansa,NH6191,1
+LH800,Lufthansa,UA9346,2
+LH802,Lufthansa,AC9281,0
+LH802,Lufthansa,ET1601,1
+LH802,Lufthansa,LG1401,2
+LH802,Lufthansa,SN7020,3
+LH802,Lufthansa,SQ2000,4
+LH802,Lufthansa,UA9000,5
+LH804,Lufthansa,A31426,0
+LH804,Lufthansa,AC9149,1
+LH804,Lufthansa,AI8506,2
+LH804,Lufthansa,TP7506,3
+LH804,Lufthansa,UA9070,4
+LH806,Lufthansa,UA9352,0
+LO453,LOT,SK8100,0
+LO455,LOT,SK8104,0
+LO457,LOT,SK8102,0
+OS965,Austrian Airlines,AC6221,0
+OS965,Austrian Airlines,OU5560,1
+OS969,Austrian Airlines,OU5558,0
+QR167,Qatar Airways,AY6693,0
+QR167,Qatar Airways,IB8407,1
+QR167,Qatar Airways,MH9259,2
+QR167,Qatar Airways,VA6370,3
+QR167,Qatar Airways,WB1192,4
+QR167,Qatar Airways,WY6120,5
+SK001,SAS Scandinavian Airlines,KL2881,0
+SK003,SAS Scandinavian Airlines,KL2883,0
+SK003,SAS Scandinavian Airlines,LO5446,1
+SK005,SAS Scandinavian Airlines,AF4900,0
+SK005,SAS Scandinavian Airlines,KL2885,1
+SK005,SAS Scandinavian Airlines,TP5547,2
+SK013,SAS Scandinavian Airlines,BT6197,0
+SK013,SAS Scandinavian Airlines,KL2893,1
+SK025,SAS Scandinavian Airlines,KL8403,0
+SK025,SAS Scandinavian Airlines,LO5490,1
+SK025,SAS Scandinavian Airlines,TP5510,2
+SK027,SAS Scandinavian Airlines,KL8405,0
+SK029,SAS Scandinavian Airlines,BT6230,0
+SK029,SAS Scandinavian Airlines,KL8407,1
+SK029,SAS Scandinavian Airlines,LO5492,2
+SK035,SAS Scandinavian Airlines,KL8409,0
+SK051,SAS Scandinavian Airlines,BT6216,0
+SK051,SAS Scandinavian Airlines,KL8573,1
+SK051,SAS Scandinavian Airlines,LO5480,2
+SK073,SAS Scandinavian Airlines,AF4905,0
+SK073,SAS Scandinavian Airlines,KL8603,1
+SK075,SAS Scandinavian Airlines,KL8487,0
+SK075,SAS Scandinavian Airlines,LO5464,1
+SK078,SAS Scandinavian Airlines,AF4970,0
+SK078,SAS Scandinavian Airlines,KL8477,1
+SK080,SAS Scandinavian Airlines,AF4570,0
+SK080,SAS Scandinavian Airlines,KL8515,1
+SK086,SAS Scandinavian Airlines,KL8531,0
+SK092,SAS Scandinavian Airlines,KL8535,0
+SK092,SAS Scandinavian Airlines,LO5406,1
+SK094,SAS Scandinavian Airlines,KL8533,0
+SK094,SAS Scandinavian Airlines,LO5498,1
+SK096,SAS Scandinavian Airlines,KL8537,0
+SK1011,SAS Scandinavian Airlines,KL8455,0
+SK1011,SAS Scandinavian Airlines,LO5484,1
+SK1013,SAS Scandinavian Airlines,KL8457,0
+SK1017,SAS Scandinavian Airlines,BT6224,0
+SK1017,SAS Scandinavian Airlines,KL8459,1
+SK1017,SAS Scandinavian Airlines,LO5482,2
+SK1045,SAS Scandinavian Airlines,AF4892,0
+SK1045,SAS Scandinavian Airlines,BT6195,1
+SK1045,SAS Scandinavian Airlines,EY3989,2
+SK1045,SAS Scandinavian Airlines,KL8485,3
+SK1045,SAS Scandinavian Airlines,LO5438,4
+SK1047,SAS Scandinavian Airlines,NH6339,0
+SK106,SAS Scandinavian Airlines,AF4903,0
+SK106,SAS Scandinavian Airlines,KL2937,1
+SK1126,SAS Scandinavian Airlines,KL8539,0
+SK1130,SAS Scandinavian Airlines,BT6210,0
+SK1130,SAS Scandinavian Airlines,KL8541,1
+SK1136,SAS Scandinavian Airlines,AF4917,0
+SK1136,SAS Scandinavian Airlines,KL8545,1
+SK1138,SAS Scandinavian Airlines,KL8547,0
+SK126,SAS Scandinavian Airlines,KL2943,0
+SK130,SAS Scandinavian Airlines,KL2947,0
+SK1408,SAS Scandinavian Airlines,UX3263,0
+SK1416,SAS Scandinavian Airlines,EY3918,0
+SK1418,SAS Scandinavian Airlines,EY3935,0
+SK1418,SAS Scandinavian Airlines,SQ2636,1
+SK142,SAS Scandinavian Airlines,A33357,0
+SK142,SAS Scandinavian Airlines,TP5502,1
+SK1420,SAS Scandinavian Airlines,EY3936,0
+SK1422,SAS Scandinavian Airlines,EY3937,0
+SK1422,SAS Scandinavian Airlines,TP5579,1
+SK1426,SAS Scandinavian Airlines,EY3938,0
+SK144,SAS Scandinavian Airlines,A33357,0
+SK144,SAS Scandinavian Airlines,TP5502,1
+SK1491,SAS Scandinavian Airlines,KL8519,0
+SK1530,SAS Scandinavian Airlines,AM7820,0
+SK1530,SAS Scandinavian Airlines,VS5917,1
+SK1556,SAS Scandinavian Airlines,AM7800,0
+SK1556,SAS Scandinavian Airlines,GA9805,1
+SK1556,SAS Scandinavian Airlines,KL2862,2
+SK1558,SAS Scandinavian Airlines,AM7801,0
+SK1558,SAS Scandinavian Airlines,RO9280,1
+SK1741,SAS Scandinavian Airlines,KL8641,0
+SK1745,SAS Scandinavian Airlines,AF5183,0
+SK1745,SAS Scandinavian Airlines,KL8479,1
+SK1771,SAS Scandinavian Airlines,KL8481,0
+SK1834,SAS Scandinavian Airlines,A33395,0
+SK186,SAS Scandinavian Airlines,KL8577,0
+SK196,SAS Scandinavian Airlines,BT6189,0
+SK196,SAS Scandinavian Airlines,KL8557,1
+SK2027,SAS Scandinavian Airlines,AF4968,0
+SK2027,SAS Scandinavian Airlines,KL8413,1
+SK2047,SAS Scandinavian Airlines,KL8575,0
+SK2047,SAS Scandinavian Airlines,LO5474,1
+SK2065,SAS Scandinavian Airlines,BT6203,0
+SK2065,SAS Scandinavian Airlines,KL8489,1
+SK2065,SAS Scandinavian Airlines,LO5460,2
+SK2112,SAS Scandinavian Airlines,KL2949,0
+SK2114,SAS Scandinavian Airlines,KL2951,0
+SK2132,SAS Scandinavian Airlines,KL8567,0
+SK2136,SAS Scandinavian Airlines,KL8569,0
+SK2136,SAS Scandinavian Airlines,TP5514,1
+SK2178,SAS Scandinavian Airlines,KL8527,0
+SK2182,SAS Scandinavian Airlines,AF3851,0
+SK2182,SAS Scandinavian Airlines,KL8579,1
+SK2184,SAS Scandinavian Airlines,KL8581,0
+SK2198,SAS Scandinavian Airlines,KL8559,0
+SK2198,SAS Scandinavian Airlines,TP5516,1
+SK2498,SAS Scandinavian Airlines,TP5563,0
+SK2548,SAS Scandinavian Airlines,VS5930,0
+SK2727,SAS Scandinavian Airlines,AF4953,0
+SK2727,SAS Scandinavian Airlines,EY4064,1
+SK2727,SAS Scandinavian Airlines,KL8585,2
+SK402,SAS Scandinavian Airlines,TP5576,0
+SK404,SAS Scandinavian Airlines,EY3939,0
+SK404,SAS Scandinavian Airlines,SQ2652,1
+SK404,SAS Scandinavian Airlines,TP5583,2
+SK4225,SAS Scandinavian Airlines,AF4969,0
+SK4225,SAS Scandinavian Airlines,KL8589,1
+SK4231,SAS Scandinavian Airlines,AF4960,0
+SK4231,SAS Scandinavian Airlines,EY4063,1
+SK4231,SAS Scandinavian Airlines,KL8529,2
+SK4231,SAS Scandinavian Airlines,LO5488,3
+SK526,SAS Scandinavian Airlines,DL7628,0
+SK526,SAS Scandinavian Airlines,EY3996,1
+SK526,SAS Scandinavian Airlines,SQ2620,2
+SK526,SAS Scandinavian Airlines,VS5916,3
+SK528,SAS Scandinavian Airlines,AM7839,0
+SK528,SAS Scandinavian Airlines,DL7626,1
+SK528,SAS Scandinavian Airlines,EY3997,2
+SK528,SAS Scandinavian Airlines,LY9775,3
+SK528,SAS Scandinavian Airlines,SQ2642,4
+SK528,SAS Scandinavian Airlines,VS5915,5
+SK528,SAS Scandinavian Airlines,WS5812,6
+SK532,SAS Scandinavian Airlines,DL7627,0
+SK532,SAS Scandinavian Airlines,VS5914,1
+SK532,SAS Scandinavian Airlines,WS5813,2
+SK534,SAS Scandinavian Airlines,AM7840,0
+SK534,SAS Scandinavian Airlines,EY3998,1
+SK534,SAS Scandinavian Airlines,SQ2644,2
+SK534,SAS Scandinavian Airlines,VN4063,3
+SK534,SAS Scandinavian Airlines,VS5918,4
+SK556,SAS Scandinavian Airlines,KL2858,0
+SK574,SAS Scandinavian Airlines,AF4559,0
+SK574,SAS Scandinavian Airlines,SQ2630,1
+SK574,SAS Scandinavian Airlines,VN4029,2
+SK580,SAS Scandinavian Airlines,AF4558,0
+SK580,SAS Scandinavian Airlines,AM7814,1
+SK701,SAS Scandinavian Airlines,KL8461,0
+SK701,SAS Scandinavian Airlines,LO5436,1
+SK705,SAS Scandinavian Airlines,A33376,0
+SK705,SAS Scandinavian Airlines,AF4884,1
+SK705,SAS Scandinavian Airlines,KL8463,2
+SK711,SAS Scandinavian Airlines,KL8465,0
+SK711,SAS Scandinavian Airlines,LO5434,1
+SK739,SAS Scandinavian Airlines,KL8639,0
+SK864,SAS Scandinavian Airlines,A33359,0
+SK864,SAS Scandinavian Airlines,TP5515,1
+SK886,SAS Scandinavian Airlines,TP5505,0
+SK898,SAS Scandinavian Airlines,AF4544,0
+SK898,SAS Scandinavian Airlines,KL8673,1
+SN2291,Brussels Airlines,EY7207,0
+SN2293,Brussels Airlines,EY7203,0
+SN2297,Brussels Airlines,NH5163,0
+SN2297,Brussels Airlines,OU5102,1
+TG960,Thai Airways,AC7455,0
+TK1793,Turkish Airlines,6E4263,0
+TK1793,Turkish Airlines,FI7022,1
+TK1793,Turkish Airlines,MS9700,2
+TK1793,Turkish Airlines,PK5793,3
+TK1795,Turkish Airlines,6E4265,0
+TK1795,Turkish Airlines,PK5795,1
+TK1795,Turkish Airlines,WB1357,2
+TP780,TAP  Portugal,CA7039,0
+TP780,TAP  Portugal,S48062,1
+TP780,TAP  Portugal,SK8900,2
