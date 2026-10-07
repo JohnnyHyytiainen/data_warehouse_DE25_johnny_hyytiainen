@@ -10,4 +10,4 @@ CREATE ROLE class_job_ads_dbt_role;
 
 -- Granta rollerna.
 GRANT ROLE class_job_ads_dbt_role to USER class_transformer;
-GRANT ROLE class_job_ads_dbt_role TO USER johnnyhyytiainen;
+GRANT ROLE class_job_ads_dbt_role TO USER johnnyhyytiainen1;

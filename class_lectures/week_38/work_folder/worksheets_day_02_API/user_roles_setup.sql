@@ -6,7 +6,7 @@ USE ROLE SECURITYADMIN;
 -- Dags att ge tillstånd som SEC-admin
 GRANT ROLE class_job_ads_dlt_role TO USER class_extract_loader;
 -- Ge mitt konto denna roll också
-GRANT ROLE class_job_ads_dlt_role TO USER johnnyhyytiainen;
+GRANT ROLE class_job_ads_dlt_role TO USER johnnyhyytiainen1;
 
 -- Ge USAGE tillstånden(privileges) till rollen
 GRANT USAGE ON WAREHOUSE dev_wh to ROLE class_job_ads_dlt_role;
@@ -21,7 +21,7 @@ GRANT SELECT, INSERT, UPDATE, DELETE ON FUTURE TABLES IN SCHEMA class_job_ads.st
 USE ROLE USERADMIN;
 
 GRANT ROLE class_job_ads_dlt_role TO ROLE SYSADMIN;
-GRANT ROLE class_job_ads_dlt_role TO USER johnnyhyytiainen;
+GRANT ROLE class_job_ads_dlt_role TO USER johnnyhyytiainen1;
 
 --
 -- Dubbelkolla alla tillstånd

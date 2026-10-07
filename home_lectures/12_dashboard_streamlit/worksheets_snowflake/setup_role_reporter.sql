@@ -33,7 +33,7 @@ GRANT SELECT ON FUTURE VIEWS IN SCHEMA home_job_ads.marts TO ROLE home_job_ads_r
 
 -- Ge USER home_reporter till ROLE home_job_ads_reporter_role
 GRANT ROLE home_job_ads_reporter_role TO USER home_reporter;
-GRANT ROLE home_job_ads_reporter_role TO USER johnnyhyytiainen;
+GRANT ROLE home_job_ads_reporter_role TO USER johnnyhyytiainen1;
 
 -- Välj rollen
 USE ROLE home_job_ads_reporter_role;

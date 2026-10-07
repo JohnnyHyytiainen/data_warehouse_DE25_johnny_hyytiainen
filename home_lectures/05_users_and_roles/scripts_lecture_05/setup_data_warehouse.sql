@@ -20,7 +20,7 @@ WAREHOUSE_SIZE = "X-SMALL"
 AUTO_SUSPEND = 60
 AUTO_RESUME = TRUE
 INITIALLY_SUSPENDED = TRUE
-COMMENT = "Warehouses for development and analysis - lecture 05, week 38";
+COMMENT = "Warehouses for development and analysis";
 
 -- Visa och dubbelkolla att jag skapade allting rätt.
 SHOW WAREHOUSES;
